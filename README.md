@@ -60,8 +60,15 @@ Execute o script manipulacao.sql para popular as tabelas.
 
 Utilize os demais scripts (consulta, condicional_2, agregacao_2) para gerar os relatórios e extrair os insights.
 
-### 🔗 Consultas Complexas e Relacionamento de Tabelas (Módulo 15 - multiplas_tabelas.sql)
+### 🔗 Consultas Complexas e Relacionamento de Tabelas (multiplas_tabelas.sql)
 Nesta etapa, o banco de dados foi explorado em sua totalidade, conectando múltiplas tabelas simultaneamente para extrair relatórios gerenciais avançados.
 - **`INNER JOIN`**: Conexão estrita entre até 4 tabelas (`pedidos`, `clientes`, `funcionarios`, `produtos`) mantendo a integridade referencial através das chaves primárias e estrangeiras.
 - **`LEFT JOIN`**: Análise de dados isolados (ex: identificação de clientes sem pedidos), combinando a junção à esquerda com a condição matemática de ausência absoluta (`WHERE ... IS NULL`).
 - **Agregações em Múltiplas Tabelas**: Uso de matemática financeira interna (`quantidade * preco`), funções agregadoras (`SUM`, `COUNT`) e organização em blocos (`GROUP BY`), com tratamento de ambiguidades de colunas via apelidos (`AS`).
+
+- ### ⚙️ Consultas Avançadas e Automação (consultas_avancadas.sql)
+Nesta etapa final, o foco foi a otimização de performance, criação de rotinas automatizadas e a aplicação de programação defensiva diretamente no motor do banco de dados.
+- **`CREATE VIEW` (Vitrines Virtuais)**: Encapsulamento de junções complexas (`JOIN`) e cálculos matemáticos financeiros diretos (`quantidade * preco`) em tabelas virtuais (`resumo_pedido`), simplificando e padronizando as consultas recorrentes.
+- **Auditoria de Performance (`EXPLAIN`)**: Análise avançada do plano de execução do banco de dados para diagnosticar o comportamento do motor sob o capô, monitorando gargalos e varreduras em tabelas.
+- **Funções e Lógica Condicional (`CREATE FUNCTION`)**: Criação de máquinas de automação e regras de negócio com declaração de variáveis (`DECLARE`), matemática agregada (`AVG`) e cardápios de decisão limpos (`CASE WHEN`).
+- **Programação Defensiva (`COALESCE`)**: Aplicação de redes de proteção em cálculos de variáveis para interceptar valores nulos (`NULL`) e evitar quebras de sistema, garantindo estabilidade e segurança na extração dos dados.
